@@ -1,0 +1,17 @@
+{
+    "name": "julix/chest-of-curriculums",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Julian Carelli",
+            "email": "julianignaciocarelli@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"App\\" : "./src"}
+    },
+    "require": {
+        "twbs/bootstrap": "4.0.0"
+    }
+}

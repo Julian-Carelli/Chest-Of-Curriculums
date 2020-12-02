@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+    
+    --fontSizeTitle_min: 1.7em;
+    --fontSizeTitle_medium:2em;
+    --fontSizeTitle_max:2.5em;
+
+    --fontSizeText_extraMin:0.8em;
+    --fontSizeText_min:1em;
+    --fontSizeText_medium:1.3em;
+    --fontSizeText_max:1.7em;
+
+    --fontWeight_regular:400;
+    --fontWeight_medium:500;
+    --fontWeight_bold: 700;
+    --fontWeight_black: 900,
+}
+
+body {
+    padding:0px;
+    margin:0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+    padding-right:0px;
+    padding-left:0px;
+}

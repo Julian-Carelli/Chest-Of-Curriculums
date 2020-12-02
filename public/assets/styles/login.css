@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+    
+    --fontSizeTitle_min: 1.7em;
+    --fontSizeTitle_medium:2em;
+    --fontSizeTitle_max:2.5em;
+
+    --fontSizeText_extraMin:0.8em;
+    --fontSizeText_min:1em;
+    --fontSizeText_medium:1.3em;
+    --fontSizeText_max:1.7em;
+
+    --fontWeight_regular:400;
+    --fontWeight_medium:500;
+    --fontWeight_bold: 700;
+    --fontWeight_black: 900,
+}
+
+.Login {
+    display:flex;
+    justify-content: center;
+    width:100%;
+    height:100vh;
+}
+
+.Login-contain {
+    width:100%;
+    max-width: 1200px;
+    margin:auto;
+}
+
+.Login-contain__name {
+    display:flex;
+    justify-content: center;
+    padding:10px 0px;
+}
+
+.Login-contain__title{
+    font-weight: var(--fontWeight_bold);
+    font-size: var(--fontSizeTitle_max);
+}
+
+.Login-contain__form {
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    max-width: 650px;
+    width: 100%;
+    padding:20px;
+}
+
+.Login-contain__email, .Login-contain__password {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    padding:5px 0px;
+}
+
+.Login-contain__label {
+    font-size:var(--fontSizeText_min);
+    font-weight: var(--fontWeight_regular);
+    width: 100%;
+}
+
+.Login-contain__input {
+    width:100%;
+    padding: 5px;
+}
+
+.Login-contain__links {
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+    max-width: 650px;
+    width:100%;
+    padding:20px;
+}
+
+.Login-contain__link {
+    padding:5px 0px;
+
+}
+
+.Login-contain__password, .Login-contain__register {
+    font-size:var(--fontSizeText_min);
+    font-weight: var(--fontWeight_regular);
+}

@@ -10,14 +10,16 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/assets/styles/global.css">
+    <link rel="stylesheet" href="../public/assets/styles/global.css?v=<?php echo(rand()); ?>">
     <link rel="stylesheet" href="../public/assets/styles/login.css?v=<?php echo(rand()); ?>">
+    <link rel="stylesheet" href="../public/assets/styles/responsive/resLogin.css?v=<?php echo(rand()); ?>">
     <title>Chest Of Curriculums</title>
 </head>
 <body>
@@ -46,10 +48,10 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             </form>
             <div class="Login-contain__links">
                 <div class=Login-contain__link>
-                    <p class="Login-contain__password">¿Olvidaste tu contraseña?</p>
+                    <p class="Login-contain__text">¿Olvidaste tu contraseña?</p>
                 </div>
                 <div class="Login-contain__link">
-                    <a class="Login-contain__register" href="./register.php">Crea una cuenta</a>
+                    <a class="Login-contain__text" href="./register.php">Crea una cuenta</a>
                 </div>
             </div>
         </div>    

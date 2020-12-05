@@ -18,7 +18,9 @@ const ajaxRegister = async e => {
         body:data
     })
 
-    window.location.href = `../views/login.php?email=${email}`
+    if(res.ok === true){
+        window.location.href = `../views/login.php?email=${email}`
+    }
 
 }
 

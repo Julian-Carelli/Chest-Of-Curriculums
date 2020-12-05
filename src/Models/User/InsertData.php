@@ -8,6 +8,12 @@ use \PDO;
 
 class InsertData extends Users
 {
+
+     /** 
+    * Agrega un usuario a la base de datos
+    * @param Connection $connection
+    */
+
     public function insertData(Connection $connection) : bool
     {
         try {

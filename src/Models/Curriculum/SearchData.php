@@ -7,6 +7,12 @@ use \PDO;
 
 class SearchData
 { 
+    /** 
+    * Busca curriculums en la base de datos que coincidan con el parametro name pasado
+    * @param Connection $connection
+    * @param string $name
+    */
+
     public function searchData(Connection $connection, string $name) : array
     {
         try {

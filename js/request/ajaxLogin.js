@@ -16,8 +16,9 @@ const ajaxLogin = async e => {
         body:data
     })
 
-    window.location.href = '../views/curriculums.php';
-
+    if(res.ok === true){
+        window.location.href = '../views/curriculums.php';
+    }
 }
 
 form.addEventListener('submit', ajaxLogin);

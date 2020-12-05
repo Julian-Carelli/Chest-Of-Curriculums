@@ -1,0 +1,50 @@
+@media (max-width:480px) and (min-width:0px){
+
+    .Login-contain__name {
+        font-size: 14px;
+    }
+
+    .Login-contain__title {
+        font-size: var(--fontSizeTitle_min);
+    }
+
+    .Login-contain__email, .Login-contain__password, .Login-contain__view, .Login-contain__link {
+        font-size: 13px;
+    }
+
+    .Login-contain__label, .Login-contain__input, .Login-contain__view-password, .Login-contain__show-password,
+    .Login-contain__text, .Login-contain__text, .Login-contain__button {
+        font-size:var(--fontSizeText_extraMin);
+    }   
+px
+}
+
+@media screen and (max-width:768px){
+
+    .Login-contain__name {
+        font-size: 12px;
+    }
+
+    .Login-contain__title {
+        font-size: 36px;
+    }
+
+    .Login-contain__email, .Login-contain__password, .Login-contain__view, .Login-contain__link {
+        font-size: 15px;
+    }
+
+}
+
+
+@media (max-width:1024px) and (min-width:768px){
+
+    .Login-contain__name {
+        font-size: 17px;
+    }
+
+
+    .Login-contain__email, .Login-contain__password, .Login-contain__view, .Login-contain__link {
+        font-size: 16px;
+    }
+
+}

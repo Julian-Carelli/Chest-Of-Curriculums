@@ -7,6 +7,12 @@ use \PDO;
 
 class SelectsData
 {
+
+    /** 
+    * Selecciona todos los curriculums que se encuentran en la base de datos
+    * @param Connection $connection
+    */
+
     public function selectsData(Connection $connection) : array
     {
         try{

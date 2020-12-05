@@ -4,11 +4,7 @@ namespace App\Models;
 
 use \PDO;
 
-define("DB_TYPE", "mysql");
-define("DB_HOST", "localhost");
-define("DB_NAME", "bd_prueba");
-define("DB_USER", "root");
-define("DB_PASSWORD", "");
+require_once __DIR__ . '/../../db/db.php';
 
 
 class Connection extends PDO{
@@ -18,7 +14,6 @@ class Connection extends PDO{
     {
         try {
 
-            
             parent::__construct(DB_TYPE.":host=".DB_HOST.";dbname=".DB_NAME.";charset=utf8",DB_USER,DB_PASSWORD);
 
             $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

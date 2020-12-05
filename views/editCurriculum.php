@@ -1,6 +1,6 @@
 <?php 
 
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use App\Models\Connection;
 use App\Models\Curriculum\SelectData;
@@ -17,7 +17,7 @@ if(isset($_SESSION['active'])){
 }
 else {
     header('Location: login.php');
-    die();
+    exit();
 }
 
 ?>
@@ -29,45 +29,45 @@ else {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/assets/styles/global.css">
+    <link rel="stylesheet" href="../public/assets/styles/global.css?v=<?php echo(rand()); ?>">
     <link rel="stylesheet" href="../public/assets/styles/form.css?v=<?php echo(rand()); ?>">
     <title>Chest Of Curriculums</title>
 </head>
 <body>
 
-    <div class="AddCurriculum">
-        <div class="AddCurriculum-contain">
-            <div class="AddCurriculum-contain__name">
-                <h2 class="AddCurriculum-contain__title">Editar Curriculum</h2>
+    <div class="Form">
+        <div class="Form-contain">
+            <div class="Form-contain__name">
+                <h2 class="Form-contain__title">Editar Curriculum</h2>
             </div>
-            <form id="editForm" class="AddCurriculum-contain__form"  method="POST">
+            <form id="editForm" class="Form-contain__form"  method="POST">
                 <input id="id" type="hidden" value=<?php echo $arrays->id?>>
-                <div class="AddCurriculum-contain__username">
-                    <label class="AddCurriculum-contain__label form-group">Nombre</label>
-                    <input id="name" maxlength="15" type="text" name="name" value="<?php echo $arrays->name?>" required placeholder="Ingrese un nombre" class="AddCurriculum-contain__input form-group">
+                <div class="Form-contain__username">
+                    <label class="Form-contain__label form-group">Nombre</label>
+                    <input id="name" maxlength="15" type="text" name="name" value="<?php echo $arrays->name?>" required placeholder="Ingrese un nombre" class="Form-contain__input form-group">
                 </div>
-                <div class="AddCurriculum-contain__last-Name">
-                    <label class="AddCurriculum-contain__label form-group">Apellido</label>
-                    <input id="lastName" maxlength="15" type="text" name="last-name" value="<?php echo $arrays->last_name?>" required placeholder="Ingrese un apellido" class="AddCurriculum-contain__input form-group">
+                <div class="Form-contain__last-Name">
+                    <label class="Form-contain__label form-group">Apellido</label>
+                    <input id="lastName" maxlength="15" type="text" name="last-name" value="<?php echo $arrays->last_name?>" required placeholder="Ingrese un apellido" class="Form-contain__input form-group">
                 </div>
-                <div class="AddCurriculum-contain__profession">
-                    <label class="AddCurriculum-contain__label form-group">Profesion</label>
-                    <input id="profession" maxlength="30" class="AddCurriculum-contain__input form-group" name="profession" type="text" value="<?php echo $arrays->profession?>"  required placeholder="Ingrese una profesion">
+                <div class="Form-contain__profession">
+                    <label class="Form-contain__label form-group">Profesion</label>
+                    <input id="profession" maxlength="30" class="Form-contain__input form-group" name="profession" type="text" value="<?php echo $arrays->profession?>"  required placeholder="Ingrese una profesion">
                 </div>
-                <div class="AddCurriculum-contain__email">
-                    <label class="AddCurriculum-contain__label form-group">Email</label>
-                    <input id="email" maxlength="30" name="email-curriculum"class="AddCurriculum-contain__input form-group" type="email" value="<?php echo $arrays->email?>" required placeholder="Ingrese un email">
+                <div class="Form-contain__email">
+                    <label class="Form-contain__label form-group">Email</label>
+                    <input id="email" maxlength="30" name="email-curriculum"class="Form-contain__input form-group" type="email" value="<?php echo $arrays->email?>" required placeholder="Ingrese un email">
                 </div>
-                <div class="AddCurriculum-contain__age">
-                    <label class="AddCurriculum-contain__label form-group">Edad</label>
-                    <input id="age" maxlength="2"class="AddCurriculum-contain__input form-group" name="age" type="text" value="<?php echo $arrays->age?>"  required placeholder="Ingrese una edad">
+                <div class="Form-contain__age">
+                    <label class="Form-contain__label form-group">Edad</label>
+                    <input id="age" maxlength="2"class="Form-contain__input form-group" name="age" type="text" value="<?php echo $arrays->age?>"  required placeholder="Ingrese una edad">
                 </div>
-                <div class="AddCurriculum-contain__place-of-residence">
-                    <label class="AddCurriculum-contain__label form-group">Lugar de residencia</label>
-                    <input id="placeOfResidence" maxlength="30" name="place-of-residence" class="AddCurriculum-contain__input form-group" type="text" value="<?php echo $arrays->place_of_residence?>"  required placeholder="Ingrese un lugar de residencia">
+                <div class="Form-contain__place-of-residence">
+                    <label class="Form-contain__label form-group">Lugar de residencia</label>
+                    <input id="placeOfResidence" maxlength="30" name="place-of-residence" class="Form-contain__input form-group" type="text" value="<?php echo $arrays->place_of_residence?>"  required placeholder="Ingrese un lugar de residencia">
                 </div>        
-                <div class="AddCurriculum-contain__send form-group">
-                    <button class="AddCurriculum-contain__button btn btn-primary" type="submit">Editar curriculum</button>
+                <div class="Form-contain__send form-group">
+                    <button class="Form-contain__button btn btn-primary" type="submit">Editar curriculum</button>
                 </div>
             </form>
         </div>    

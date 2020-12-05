@@ -8,6 +8,13 @@ use \PDO;
 
 class DeleteData 
 {
+
+    /** 
+    * Elimina el curriculum seleccionado en la base de datos
+    * @param Connection $connection
+    * @param int $id
+    */
+
     public function deleteData(Connection $connection, int $id) : bool
     {
         try{

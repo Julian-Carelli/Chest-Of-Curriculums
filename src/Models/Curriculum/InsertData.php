@@ -9,6 +9,11 @@ use \PDO;
 
 class InsertData extends Curriculum {
 
+    /** 
+    * Agrega un curriculum a la base de datos
+    * @param Connection $connection
+    */
+
     public function insertData(Connection $connection) : bool
     {   
         try{

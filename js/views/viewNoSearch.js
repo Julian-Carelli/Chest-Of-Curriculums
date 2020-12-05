@@ -5,7 +5,7 @@ const viewNoSearch = () => {
     contain.innerHTML = '';
 
     contain.innerHTML = `
-        <div class="Curriculums-curriculum col-4">
+        <div class="Curriculums-curriculum Curriculums-curriculum__no-view col-4">
             <div class="Curriculums-curriculum__name">
                 <h2 class="Curriculums-curriculum__title">
                     No se pudo encontrar ningun nombre

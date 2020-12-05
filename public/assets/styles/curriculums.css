@@ -1,26 +1,10 @@
-:root {
-    --fontSizeTitle_min: 1.7em;
-    --fontSizeTitle_medium:2em;
-    --fontSizeTitle_max:2.5em;
-
-    --fontSizeText_extraMin:0.8em;
-    --fontSizeText_min:1em;
-    --fontSizeText_medium:1.3em;
-    --fontSizeText_max:1.7em;
-
-    --fontWeight_regular:400;
-    --fontWeight_medium:500;
-    --fontWeight_bold: 700;
-    --fontWeight_black: 900,
-}
-
-
 .Curriculums {
     display:flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     width:100%;
+    background-color: #0f3057;
 }
 
 .Curriculums__navbar {
@@ -28,6 +12,7 @@
     justify-content: flex-start;
     height:50px;
     width: 100%;
+    background-color: #008891;
 }
 
 .Curriculums__user {
@@ -50,7 +35,14 @@
     display: flex;
     text-align: center;
     width:100%;
-    padding:45px 0px;
+    padding:25px 0px;
+}
+
+.Curriculums__menu {
+    padding:10px 0px;
+    width: 50%;
+    margin:auto;
+    text-align: center;
 }
 
 .Curriculums__name {
@@ -62,15 +54,18 @@
 
 
 .Curriculums__title {
-    font-weight: var(--fontWeight_bold);
-    font-size: var(--fontSizeTitle_max);
+    font-family: 'Alegreya', serif;
+    font-weight: 800;
+    font-size: 62px;
+    color:white;
+    kerning: 0em;
 }
 
 .Curriculums__underline {
     width:100%;
     max-width: 250px;
     height:5px;
-    background-color: black;
+    background-color: #008891;
     margin:auto;
 }
 
@@ -90,25 +85,28 @@
 }
 
 .Curriculums__input {
-    width: 250px;
+    width: 100%;
     padding:5px;
+    border-radius: 10px;
+    border:0;
+    font-weight: var(--fontWeight_regular);
+    font-size: var(--fontSizeText_min);
 }
 
 .Curriculums__links {
     display:flex;
     justify-content: center;
     align-items: center;
-    flex-direction:column;
     max-width: 650px;
     width:100%;
 }
 
 .Curriculums__create, .Curriculums__delete {
-    padding: 5px 0px;
+    padding:10px;
 }
 
 .Curriculums__link {
-    color:white;
+    color:black;
     text-decoration: none;
 }
 
@@ -127,19 +125,71 @@
 .Curriculums-curriculum {
     max-width: 350px;
     width: 100%;
-    padding:0px 20px;
+    padding:20px;
+}
+
+.Curriculums-curriculum__header {
+    display: flex;
+    width: 100%;
+    background-color: #e7e7de;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+
+.Curriculums__text {
+    font-weight: var(--fontWeight_regular);
+    font-size: var(--fontSizeText_medium);
+    color:#e7e7de;
+}
+
+.Curriculums-curriculum__no-view{
+    height: 100vh;
+
 }
 
 .Curriculums-curriculum__name {
     padding:10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: #f1f6f9;
+    background-color: #e7e7de;
+    width:80%;
 }
 
 .Curriculums-curriculum__title {
     font-weight: var(--fontWeight_bold);
     font-size: var(--fontSizeTitle_min);
+    color:#00587a;
+    margin:0px;
+}
+
+.Curriculums-curriculum__font {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+
+.Curriculums-curriculum__icon {
+    padding:0px 5px;
+    font-size: var(--fontSizeText_min);
+}
+
+.Curriculums-curriculum__edit {
+    color: #808080;
+}
+
+.Curriculums-curriculum__edit:hover {
+    color: #570f0f;
+    text-decoration: none;
+}
+
+.Curriculums-curriculum__delete {
+    color: #808080;
+}
+
+.Curriculums-curriculum__delete:hover {
+    color: #570f0f;
 }
 
 .Curriculums-curriculum__background {
@@ -155,12 +205,13 @@
     padding:10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: #f1f6f9;
+    background-color: #e7e7de;
 }
 
 .Curriculums-curriculum__text {
     font-weight: var(--fontWeight_regular);
     font-size: var(--fontSizeText_min);
+    color:#00587a;
 }
 
 .Curriculums-curriculum__buttons {
@@ -177,19 +228,3 @@
     padding:5px 5px;
 }
 
-.Curriculums-curriculum__edit {
-    color:white;
-}
-
-.Curriculums-curriculum__edit:hover {
-    color:white;
-    text-decoration: none;
-}
-
-.Curriculums-curriculum__delete {
-    color:white;
-}
-
-.Curriculums-curriculum__delete:hover {
-    color:white;
-}

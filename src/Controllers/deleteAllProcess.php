@@ -2,18 +2,20 @@
 
 namespace App\Controllers;
 
-require_once '../../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 use App\Models\Connection;
 use App\Models\Curriculum\DeleteAllData;
 
-$connection = new Connection();
-$curriculums = new DeleteAllData();
-$curriculum = $curriculums->deleteAllData($connection);
+try {
+    $connection = new Connection();
+    $curriculums = new DeleteAllData();
+    $curriculum = $curriculums->deleteAllData($connection);
 
-if($curriculum === true){
-    header("Location:../../views/curriculums.php");
+    if($curriculum === true){
+        header("Location:../../views/curriculums.php");
+    }
 }
-else {
-    echo 'Error';
+catch(Exception $e){
+
 }

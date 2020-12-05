@@ -8,8 +8,12 @@ use \PDO;
 
 
 class DeleteAllData
-{
-    
+{   
+    /** 
+    * Elimina todos los curriculums vigentes en la base de datos
+    * @param Connection $connection
+    */
+
     public function deleteAllData(Connection $connection) : bool
     {
         try {

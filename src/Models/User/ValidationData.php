@@ -7,6 +7,14 @@ use \PDO;
 
 class ValidationData 
 {
+
+    /** 
+    * Busca el usuario que coincida con los parametros pasados, en la base de datos
+    * @param Connection $connection
+    * @param string $email
+    * @param string $password
+    */
+
     public function validationData(Connection $connection, string $email, string $password) : object
     {
         try{

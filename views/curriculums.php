@@ -1,6 +1,6 @@
 <?php 
 
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use App\Models\Connection;
 use App\Models\Curriculum\SelectsData;
@@ -29,12 +29,13 @@ else {
     <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/assets/styles/global.css?v=<?php echo(rand()); ?>">
     <link rel="stylesheet" href="../public/assets/styles/curriculums.css?v=<?php echo(rand()); ?>">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Chest Of Curriculums</title>
 </head>
 <body>
 
     <div class="Curriculums container-fluid">
-        <nav class="Curriculums__navbar row navbar navbar-dark bg-primary">
+        <nav class="Curriculums__navbar row navbar navbar-dark">
             <div class="Curriculums__user col-12">
                 <p class="Curriculums__username"><?php echo $_SESSION['username'] ?></p>
                 <a href="login.php" class="Curriculums__username">Cerrar sesíon</a>
@@ -43,7 +44,11 @@ else {
         <div class="Curriculums__header row">
             <div class="Curriculums__name col-12">
                 <h2 class="Curriculums__title">Curriculums</h2>
-                <div class="Curriculums__underline"></div>
+            </div>
+            <div class="Curriculums__menu">
+                <p class="Curriculums__text">
+                    Todos los curriculums que puedas crear, editar y eliminar en una sola pagina, administralos a tu manera, tu espacio, tu decisíon, una sola oportunidad
+                <p>
             </div>
         </div>
         <div class="Curriculums__function row">
@@ -53,13 +58,8 @@ else {
         </div>
         <div class="Curriculums__links row">
             <div class="Curriculums__create">
-                <button class="Curriculums__button btn btn-primary">
-                    <a class="Curriculums__link" href="addCurriculum.php">Agregar curriculums</a>
-                </button>
-            </div>
-            <div class="Curriculums__delete">
-                <button class="Curriculums__button btn btn-danger">
-                    <a class="Curriculums__link" href="../src/Controllers/deleteAllProcess.php">Eliminar curriculums</a>
+                <button class="Curriculums__button btn" style="background-color: #008891;">
+                    <a class="Curriculums__link" style="color:white;" href="addCurriculum.php">Agregar curriculums</a>
                 </button>
             </div>
         </div>
@@ -68,9 +68,21 @@ else {
             foreach($arrays as $array){
             ?>
             <div class="Curriculums-curriculum col-4">
-                <div class="Curriculums-curriculum__name">
-                    <h2 class="Curriculums-curriculum__title"><?php echo $array->name . " " . $array->last_name ?></h2>
+
+                <div class="Curriculums-curriculum__header">
+                    <div class="Curriculums-curriculum__name">
+                        <h2 class="Curriculums-curriculum__title"><?php echo $array->name . " " . $array->last_name ?></h2>
+                    </div>
+                    <div class="Curriculums-curriculum__font">
+                        <a class="Curriculums-curriculum__edit" href="editCurriculum.php?id=<?php echo "$array->id"?>">
+                            <i class="Curriculums-curriculum__icon fas fa-pen"></i>
+                        </a>
+                        <a class="Curriculums-curriculum__delete" href="../src/Controllers/deleteProcess.php?id=<?php echo "$array->id"?>">
+                            <i class="Curriculums-curriculum__icon far fa-trash-alt"></i>
+                        </a>
+                    </div>
                 </div>
+
                 <div class="Curriculums-curriculum__background">
                     <img class="Curriculums__img" src="../public/assets/images/ropa1.jpg" alt="curriculum"></img>
                 </div>
@@ -80,22 +92,6 @@ else {
                     <p class="Curriculums-curriculum__text"><?php echo "$array->age" ?></p>
                     <p class="Curriculums-curriculum__text"><?php echo "$array->place_of_residence"?></p>
                     <p class="Curriculums-curriculum__text"><?php echo "$array->date"?></p>
-                </div>
-                <div class="Curriculums-curriculum__buttons">
-                    <div class="Curriculums-curriculum__link">
-                        <button class="Curriculums-curriculum__button btn btn-primary">
-                            <a class="Curriculums-curriculum__edit" href="editCurriculum.php?id=<?php echo "$array->id"?>" >
-                                Editar Curriculum
-                            </a>
-                        </button>
-                    </div>
-                    <div class="Curriculums-curriculum__link">
-                        <button class="Curriculums-curriculum__button btn btn-danger">
-                            <a class="Curriculums-curriculum__delete" href="../src/Controllers/deleteProcess.php?id=<?php echo "$array->id"?>">
-                                Eliminar Curriculum
-                            </a>
-                        </button>
-                    </div>
                 </div>
             </div>
             <?php              

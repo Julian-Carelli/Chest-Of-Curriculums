@@ -8,6 +8,13 @@ use \PDO;
 
 class SelectData
 {
+
+    /** 
+    * Selecciona un curriculum en la base de datos que coincida con el parametro id pasado 
+    * @param Connection $connection
+    * @param int $id
+    */
+
     public function selectData(Connection $connection, int $id) : object
     {   
         try {

@@ -26,7 +26,9 @@ const ajaxAddForm = async e => {
             body:data
         })
 
-        window.location.href = '../views/curriculums.php';
+        if(res.ok === true){
+            window.location.href = '../views/curriculums.php';
+        }
 
     }
     catch(error){

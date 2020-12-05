@@ -1,4 +1,4 @@
-.Login {
+.Register {
     display:flex;
     justify-content: center;
     width:100%;
@@ -6,27 +6,28 @@
     background-color: #570f0f;
 }
 
-.Login-contain {
+.Register-contain {
     width:100%;
     max-width: 1200px;
     margin:auto;
+    padding:45px;
 }
 
-.Login-contain__name {
+.Register-contain__name {
     display:flex;
     padding:20px;
     margin:auto;
     max-width: 650px;
 }
 
-.Login-contain__title{
+.Register-contain__title {
     font-family: 'Alegreya', serif;
     font-weight: 800;
     font-size: 55px;
     color: #e7e7de;
 }
 
-.Login-contain__form {
+.Register-contain__form {
     display: flex;
     flex-direction: column;
     margin:auto;
@@ -35,56 +36,40 @@
     padding:20px;
 }
 
-.Login-contain__email, .Login-contain__password {
+.Register-contain__email, .Register-contain__password {
     display:flex;
     flex-direction: column;
+    padding:5px 0px;
     width: 100%;
+}
+
+.Register-contain__view {
+    display: flex;
+    align-items: center;
     padding:5px 0px;
 }
 
-.Login-contain__view {
-    display: flex;
-    align-items: center;
-}
-
-.Login-contain__show-password {
+.Register-contain__show-password {
     padding:0px 10px;
     color: #e7e7de;
 }
 
-.Login-contain__label {
+.Register-contain__label {
     font-size:var(--fontSizeText_min);
     font-weight: var(--fontWeight_regular);
     width: 100%;
     color: #e7e7de;
 }
 
-.Login-contain__input {
+.Register-contain__input {
     width:100%;
-    padding: 5px;
+    padding:5px;
 }
 
-.Login-contain__links {
-    display:flex;
-    flex-direction: column;
-    margin:auto;
-    max-width: 650px;
-    width:100%;
-    padding:20px;
-}
-
-.Login-contain__link {
+.Register-contain__send {
     padding:5px 0px;
 }
 
-.Login-contain__text {
-    font-size:var(--fontSizeText_min);
-    font-weight: var(--fontWeight_regular);
-    color: #e7e7de;
-}
-
-.Login-contain__button {
-    font-size:var(--fontSizeText_min);
+.Register-contain__button {
     background-color: #916000;
 }
-

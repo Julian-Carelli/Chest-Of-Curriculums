@@ -1,47 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-
-:root {
-    
-    --fontSizeTitle_min: 1.7em;
-    --fontSizeTitle_medium:2em;
-    --fontSizeTitle_max:2.5em;
-
-    --fontSizeText_extraMin:0.8em;
-    --fontSizeText_min:1em;
-    --fontSizeText_medium:1.3em;
-    --fontSizeText_max:1.7em;
-
-    --fontWeight_regular:400;
-    --fontWeight_medium:500;
-    --fontWeight_bold: 700;
-    --fontWeight_black: 900,
-}
-
-.Register, .AddCurriculum {
+.Form{
     display:flex;
     justify-content: center;
     width:100%;
-    height:100vh;
+    background-color: #e7e7de;
 }
 
-.Register-contain, .AddCurriculum-contain {
+.Form-contain {
     width:100%;
     max-width: 1200px;
     margin:auto;
     padding:45px;
 }
 
-.Register-contain__name, .AddCurriculum-contain__name {
+.Form-contain__name{
     display:flex;
-    justify-content: center;
+    padding:20px;
+    max-width: 650px;
+    margin:auto;
 }
 
-.Register-contain__title, .AddCurriculum-contain__title {
-    font-weight: var(--fontWeight_bold);
-    font-size: var(--fontSizeTitle_max);
+.Form-contain__title{
+    font-family: 'Alegreya', serif;
+    font-weight: 800;
+    font-size: 55px;
+    color: #0f3057;
 }
 
-.Register-contain__form, .AddCurriculum-contain__form {
+.Form-contain__form{
     display: flex;
     flex-direction: column;
     margin:auto;
@@ -50,43 +35,33 @@
     padding:20px;
 }
 
-.Register-contain__email, .Register-contain__password, .AddCurriculum-contain__username, .AddCurriculum-contain__last-name
-, .AddCurriculum-contain__profession, .AddCurriculum-contain__email, .AddCurriculum-contain__age, .AddCurriculum-contain__place-of-residence {
+.Form-contain__username, .Form-contain__last-name
+, .Form-contain__profession, .Form-contain__email, .Form-contain__age, .Form-contain__place-of-residence {
     display:flex;
     flex-direction: column;
     padding:5px 0px;
     width: 100%;
 }
 
-.Register-contain__view {
-    display:flex;
-    width: 100%;
-    align-items: center;
-
-}
-
-.Register-contain__show-password {
-    padding:0px 10px;
-}
-
-.Register-contain__label, .AddCurriculum-contain__label {
+.Form-contain__label {
     font-size:var(--fontSizeText_min);
-    font-weight: var(--fontWeight_regular);
+    font-weight: var(--fontWeight_medium);
     width: 100%;
+    color: #0f3057;
 }
 
-.Register-contain__input, .AddCurriculum-contain__input {
+.Form-contain__input {
     width:100%;
     padding:5px;
 }
 
-.Register-contain__send, .AddCurriculum-contain__send {
-    padding:5px 0px;
-    
+.Form-contain__send{
+    padding:5px 0px;   
 }
 
-.Register-contain__button, .AddCurriculum-contain__button {
+.Form-contain__button{
     font-size:var(--fontSizeText_min);
     font-weight: var(--fontWeight_regular);
-
+    background-color: #008891;
+    color:white;
 }

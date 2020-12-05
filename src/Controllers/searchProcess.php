@@ -2,21 +2,24 @@
 
 namespace App\Controllers;
 
-require_once '../../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 use App\Models\Connection;
 use App\Models\Curriculum\SearchData;
 
 $name = $_POST['name'];
 
+try{
+    if(isset($_POST['name'])){  
+        $connection = new Connection();
+        $curriculum = new SearchData();
+        $arrays = $curriculum->searchData($connection, $name);
+    
+        echo json_encode($arrays);
+    }
 
-if(isset($_POST['name'])){  
-    $connection = new Connection();
-    $curriculum = new SearchData();
-    $arrays = $curriculum->searchData($connection, $name);
+}
+catch(Exception $e){
 
-    echo json_encode($arrays);
 }
-else {
-    echo 'nada';
-}
+

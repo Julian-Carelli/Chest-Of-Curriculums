@@ -15,8 +15,9 @@ if(isset($_SESSION['active'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/assets/styles/global.css">
-    <link rel="stylesheet" href="../public/assets/styles/form.css?v=<?php echo(rand()); ?>">
+    <link rel="stylesheet" href="../public/assets/styles/global.css?v=<?php echo(rand()); ?>">
+    <link rel="stylesheet" href="../public/assets/styles/register.css?v=<?php echo(rand()); ?>">
+    <link rel="stylesheet" href="../public/assets/styles/responsive/resRegister.css?v=<?php echo(rand()); ?>">
     <title>Chest Of Curriculums</title>
 </head>
 <body>
@@ -26,7 +27,7 @@ if(isset($_SESSION['active'])){
             <div class="Register-contain__name">
                 <h2 class="Register-contain__title">Registrarse</h2>
             </div>
-            <form id="registerForm" class="Register-contain__form" action="../src/Controllers/formRegister.php" method="POST">
+            <form id="registerForm" class="Register-contain__form" method="POST">
                 <div class="Register-contain__username">
                     <label class="Register-contain__label form-group">Nombre de usuario</label>
                     <input id="username" type="text" name="username" required placeholder="Ingrese un nombre de usuario" class="Register-contain__input form-group">

@@ -7,6 +7,13 @@ use \PDO;
 
 class EditData 
 {
+
+    /** 
+    * Edita el curriculum seleccionado y lo actualiza en la base de datos
+    * @param Connection $connection
+    * @param array $array
+    */
+
     public function editData(Connection $connection, array $array) : bool
     {
         try {

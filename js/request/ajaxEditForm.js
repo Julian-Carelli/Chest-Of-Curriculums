@@ -14,7 +14,6 @@ const ajaxEditForm = async e => {
         let placeOfResidence = document.getElementById('placeOfResidence').value
         let id = document.getElementById('id').value
 
-
         const data = new FormData(form)
         data.append('name', name);
         data.append('last-name', lastName);
@@ -23,14 +22,14 @@ const ajaxEditForm = async e => {
         data.append('age', age);
         data.append('place-of-residence', placeOfResidence);
 
-        console.log('ola');
-
         const res = await fetch(`../../src/Controllers/editProcess.php?id=${id}`, {
             method:'POST',
             body:data
         })
 
-        window.location.href = '../views/curriculums.php';
+        if(res.ok === true){
+            window.location.href = '../views/curriculums.php';
+        }
 
     }
     catch(error){

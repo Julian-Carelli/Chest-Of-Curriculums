@@ -1,0 +1,52 @@
+@media (max-width:480px) and (min-width:0px){
+
+    .Register-contain__name {
+        font-size: 18px;
+    }
+
+    .Register-contain__title {
+        font-size: var(--fontSizeTitle_min);
+    }
+
+    .Register-contain__username, .Register-contain__email, .Register-contain__password, .Register-contain__view, .Register-contain__password, .Register-contain__send {
+        font-size: 13px;
+    }
+
+    .Register-contain__label, .Register-contain__input, .Register-contain__button {
+        font-size:var(--fontSizeText_ExtraMin);
+    }
+    
+}
+
+@media (max-width:768px){
+
+    .Register-contain__name {
+        padding:20px 0px;
+    }
+
+    .Register-contain__title {
+        font-size: 36px;
+    }
+
+    .Register-contain__form {
+        padding:0px;
+    }
+
+    .Register-contain__username, .Register-contain__email, .Register-contain__password, .Register-contain__view, .Register-contain__password, .Register-contain__send {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width:1024px) and (min-width:768px){
+
+    .Login-contain__name {
+        font-size: 25px;
+    }
+
+    .Register-contain__username, .Register-contain__email, .Register-contain__password, .Register-contain__view, .Register-contain__password, .Register-contain__send {
+        font-size: 15px;
+        padding:5px 0px;
+    }
+
+}
